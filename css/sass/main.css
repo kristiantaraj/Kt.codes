@@ -6,7 +6,8 @@ body, html {
 #header {
   background: url("../../images/banner.jpeg") center no-repeat;
   height: 100%;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  z-index: 2; }
   #header .shade {
     height: 100%;
     background-color: rgba(58, 61, 223, 0.815); }
@@ -17,7 +18,7 @@ body, html {
   box-shadow: 2px 3px 10px #282828;
   position: fixed;
   width: 100%;
-  z-index: 2;
+  z-index: 4;
   animation-name: navDown;
   animation-duration: 4s; }
 
@@ -80,7 +81,7 @@ body, html {
   text-align: center;
   animation-name: slideDown;
   animation-duration: 4s;
-  z-index: 1; }
+  z-index: 3; }
 
 @keyframes slideDown {
   from {
@@ -114,20 +115,140 @@ body, html {
 .fa-angle-down:hover {
   cursor: pointer; }
 
-.about .me {
-  width: 200px;
-  border-radius: 30%;
-  display: flex;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 5rem; }
+#about {
+  height: 60%; }
+  #about .me {
+    display: flex;
+    width: 200px;
+    border-radius: 30%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5rem; }
+  #about .animate {
+    animation-name: photoFade;
+    animation-duration: 8s; }
+  #about .animate2 {
+    animation-name: textSlide;
+    animation-duration: 4s; }
+  #about .about-title {
+    text-align: center;
+    color: #eeeeee;
+    margin-top: 3rem;
+    z-index: 1; }
+  #about .about-me {
+    color: #eeeeee;
+    text-align: center;
+    margin: 1rem 30% 0 30%;
+    margin-bottom: 5rem; }
 
-.about .about-title {
-  text-align: center;
-  color: #eeeeee;
-  margin-top: 3rem; }
+@keyframes textSlide {
+  from {
+    margin-right: -1500px; }
+  to { } }
 
-.about .about-me {
-  color: #eeeeee;
-  text-align: center;
-  margin: 1rem 30% 0 30%; }
+@keyframes photoFade {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.skills {
+  background-color: #535353;
+  padding-top: 3rem; }
+  .skills .image-skills {
+    width: 200px;
+    border-radius: 10%;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1rem; }
+  .skills .skills-title {
+    text-align: center;
+    color: #eeeeee; }
+  .skills .html {
+    background-color: #9374fc;
+    margin: 1rem 30% 0 30%;
+    border-radius: 10px; }
+    .skills .html .inside {
+      background-color: #c0acff;
+      width: 85%;
+      border-radius: 10px;
+      text-align: center;
+      color: #6033f5;
+      font-weight: 800; }
+  .skills .css {
+    background-color: #9374fc;
+    margin: 1rem 30% 0 30%;
+    border-radius: 10px; }
+    .skills .css .inside {
+      background-color: #c0acff;
+      width: 75%;
+      border-radius: 10px;
+      text-align: center;
+      color: #6033f5;
+      font-weight: 800; }
+  .skills .js {
+    background-color: #9374fc;
+    margin: 1rem 30% 0 30%;
+    border-radius: 10px; }
+    .skills .js .inside {
+      background-color: #c0acff;
+      width: 65%;
+      border-radius: 10px;
+      text-align: center;
+      color: #6033f5;
+      font-weight: 800; }
+  .skills .php {
+    background-color: #9374fc;
+    margin: 1rem 30% 0 30%;
+    border-radius: 10px; }
+    .skills .php .inside {
+      background-color: #c0acff;
+      width: 45%;
+      border-radius: 10px;
+      text-align: center;
+      color: #6033f5;
+      font-weight: 800; }
+  .skills .sql {
+    background-color: #9374fc;
+    margin: 1rem 30% 0 30%;
+    border-radius: 10px; }
+    .skills .sql .inside {
+      background-color: #c0acff;
+      width: 65%;
+      border-radius: 10px;
+      text-align: center;
+      color: #6033f5;
+      font-weight: 800; }
+  .skills .java {
+    background-color: #9374fc;
+    margin: 1rem 30% 0 30%;
+    border-radius: 10px; }
+    .skills .java .inside {
+      background-color: #c0acff;
+      width: 50%;
+      border-radius: 10px;
+      text-align: center;
+      color: #6033f5;
+      font-weight: 800; }
+  .skills .ps {
+    background-color: #9374fc;
+    margin: 1rem 30% 0 30%;
+    border-radius: 10px; }
+    .skills .ps .inside {
+      background-color: #c0acff;
+      width: 67%;
+      border-radius: 10px;
+      text-align: center;
+      color: #6033f5;
+      font-weight: 800; }
+  .skills .animate-skills {
+    animation-name: bigUp;
+    animation-duration: 3s; }
+  .skills .lang {
+    margin-top: 1.5rem; }
+
+@keyframes bigUp {
+  from {
+    width: 0%; }
+  to { } }

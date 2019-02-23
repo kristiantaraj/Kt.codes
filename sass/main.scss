@@ -3,10 +3,13 @@
 //THESE ARE THE COLORS
 $primary-color: #0C0032;
 $secondary-color: #1d0485;
-$third: rgba(53, 0, 211,1);
+$third: #3500d3;
 $fourth: #c0acff;
 $fifth: #282828;
+$in: #9374fc;
+$in-text: #6033f5;
 $background: #3a3a3a;
+$background-skills: #535353;
 $text: #eeeeee;
 $text-black: #000000;
 
@@ -18,10 +21,12 @@ body,html {
     background-color: $background;
 }
 
+
 #header{
     background: url("../../images/banner.jpeg") center no-repeat;
     height: 100%;
     background-attachment: fixed;
+    z-index: 2;
 
     .shade {
         height: 100%;
@@ -37,7 +42,7 @@ body,html {
     box-shadow: 2px 3px 10px $fifth;
     position: fixed;
     width: 100%;
-    z-index: 2;
+    z-index: 4;
     animation-name: navDown;
     animation-duration: 4s;
 
@@ -111,7 +116,7 @@ body,html {
     text-align: center;
     animation-name: slideDown;
     animation-duration: 4s;
-    z-index: 1;
+    z-index: 3;
 
     @keyframes slideDown {
         from{margin-top: -1000px;}
@@ -154,29 +159,200 @@ body,html {
 
 // MAIN SECTION
 
-.about {
+#about {
+
+    height: 60%;
 
     .me {
+        display: flex;
         width: 200px;
         border-radius: 30%;
-        display: flex;
         margin-right: auto;
         margin-left: auto;
         margin-top: 5rem;
+        
     }
 
+    
+    .animate {
+        animation-name: photoFade;
+        animation-duration: 8s;
+    }
+    .animate2 {
+        animation-name: textSlide;
+        animation-duration: 4s;
+    }
+    
+
+   
     .about-title {
         text-align: center;
         color: $text;
         margin-top: 3rem;
+        z-index: 1;
     }
 
     .about-me {
         color: $text;
         text-align: center;
         margin: 1rem 30% 0 30%;
+        margin-bottom: 5rem;
     }
+
+    @keyframes textSlide {
+        from{margin-right: -1500px}
+        to{}
+    }
+
+    @keyframes photoFade {
+        from{opacity: 0;}
+        to{opacity: 1;}
+    }
+
+
+
 
 }
 
 
+.skills {
+
+    background-color: $background-skills;
+    padding-top: 3rem;
+
+    .image-skills {
+        width: 200px;
+        border-radius: 10%;
+        display: flex;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 1rem;
+    }
+
+    .skills-title {
+        text-align: center;
+        color: $text;
+    }
+
+    .html {
+        background-color: $in;
+        margin: 1rem 30% 0 30%;
+        border-radius: 10px;
+
+        .inside {
+            background-color: $fourth;
+            width: 85%;
+            border-radius: 10px;
+            text-align: center;
+            color: $in-text;
+            font-weight: 800;
+        }
+
+        
+    }
+
+    .css {
+        background-color: $in;
+        margin: 1rem 30% 0 30%;
+        border-radius: 10px;
+
+        .inside {
+            background-color: $fourth;
+            width: 75%;
+            border-radius: 10px;
+            text-align: center;
+            color: $in-text;
+            font-weight: 800;
+        }
+    }
+
+    .js {
+        background-color: $in;
+        margin: 1rem 30% 0 30%;
+        border-radius: 10px;
+
+        .inside {
+            background-color: $fourth;
+            width: 65%;
+            border-radius: 10px;
+            text-align: center;
+            color: $in-text;
+            font-weight: 800;
+        }
+    }
+
+    .php {
+        background-color: $in;
+        margin: 1rem 30% 0 30%;
+        border-radius: 10px;
+
+        .inside {
+            background-color: $fourth;
+            width: 45%;
+            border-radius: 10px;
+            text-align: center;
+            color: $in-text;
+            font-weight: 800;
+        }
+    }
+
+    .sql {
+        background-color: $in;
+        margin: 1rem 30% 0 30%;
+        border-radius: 10px;
+
+        .inside {
+            background-color: $fourth;
+            width: 65%;
+            border-radius: 10px;
+            text-align: center;
+            color: $in-text;
+            font-weight: 800;
+        }
+    }
+
+    .java {
+        background-color: $in;
+        margin: 1rem 30% 0 30%;
+        border-radius: 10px;
+
+        .inside {
+            background-color: $fourth;
+            width: 50%;
+            border-radius: 10px;
+            text-align: center;
+            color: $in-text;
+            font-weight: 800;
+        }
+    }
+
+    .ps {
+        background-color: $in;
+        margin: 1rem 30% 0 30%;
+        border-radius: 10px;
+
+        .inside {
+            background-color: $fourth;
+            width: 67%;
+            border-radius: 10px;
+            text-align: center;
+            color: $in-text;
+            font-weight: 800;
+
+        }
+    }
+
+    .animate-skills {
+        animation-name: bigUp;
+        animation-duration: 3s;
+    }
+
+    .lang {
+        margin-top: 1.5rem;
+    }
+
+    @keyframes bigUp {
+        from{width: 0%}
+        to{}
+    }
+}
