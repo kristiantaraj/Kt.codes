@@ -1,0 +1,182 @@
+// PUT VARIABLES OF COLORS , IMAGES etc...
+
+//THESE ARE THE COLORS
+$primary-color: #0C0032;
+$secondary-color: #1d0485;
+$third: rgba(53, 0, 211,1);
+$fourth: #c0acff;
+$fifth: #282828;
+$background: #3a3a3a;
+$text: #eeeeee;
+$text-black: #000000;
+
+//HERE ARE THE FONTS
+
+body,html {
+    margin: 0;
+    height: 100%;
+    background-color: $background;
+}
+
+#header{
+    background: url("../../images/banner.jpeg") center no-repeat;
+    height: 100%;
+    background-attachment: fixed;
+
+    .shade {
+        height: 100%;
+        background-color: rgba(58, 61, 223, 0.815);
+    }
+
+}
+
+.nav-navbar{
+
+    height: 3rem;
+    background-color: $fifth;
+    box-shadow: 2px 3px 10px $fifth;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    animation-name: navDown;
+    animation-duration: 4s;
+
+    @keyframes navDown {
+        from{height: 0;}
+        to{height: 3rem;}
+    }
+
+    .username {
+        position: absolute;
+        color: $fourth;
+        font-size: 1.5rem;
+        margin-top: 6px;
+        margin-left: 2rem;
+        animation-name: navDown2;
+        animation-duration: 4s;
+    }
+
+    a {
+        color: $text;
+        float: right;
+        font-size: 1rem;
+        padding: 10px;
+        padding-bottom: 13px;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        text-align: center;
+        
+    }
+
+    .links {
+        animation-name: navDown3;
+        animation-duration: 4s;
+    }
+
+    @keyframes navDown2 {
+        from{margin-top: -60px;}
+        to{margin-top: 6px;}
+    }
+
+    @keyframes navDown3 {
+        from{margin-top: -60px;}
+        to{margin-top: 0;}
+    }
+
+    a:hover {
+        background-color: $third;
+        color: $text;
+        text-decoration: none;
+        animation-name: slide;
+        animation-duration: 1s;
+    }
+
+    @keyframes slide {
+        from{background-color:rgba(53, 0, 211,0)}
+        to{background-color:rgba(53, 0, 211,1)}
+    }
+
+
+    .space-right {
+        margin-right: 3rem;
+    }
+
+}
+
+.title {
+
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+    animation-name: slideDown;
+    animation-duration: 4s;
+    z-index: 1;
+
+    @keyframes slideDown {
+        from{margin-top: -1000px;}
+        to{margin-top: 0;}
+    }
+    
+    .title-text {
+        text-transform: uppercase;
+        color: $text;
+        font-size: 5rem;
+    }
+
+    .sub-text {
+        font-size: 1.5rem;
+        color: $text;
+    }
+
+}
+
+.go-down {
+
+    position: absolute;
+    bottom: 0px;
+    font-size: 3rem;
+    width: 100%;
+    text-align: center;
+    color: white;
+    animation-name: slideUp;
+    animation-duration: 8s;
+
+    @keyframes slideUp {
+        from{opacity: 0;}
+        to{opacity: 1;}
+    }
+}
+
+.fa-angle-down:hover {
+    cursor: pointer;
+}
+
+// MAIN SECTION
+
+.about {
+
+    .me {
+        width: 200px;
+        border-radius: 30%;
+        display: flex;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 5rem;
+    }
+
+    .about-title {
+        text-align: center;
+        color: $text;
+        margin-top: 3rem;
+    }
+
+    .about-me {
+        color: $text;
+        text-align: center;
+        margin: 1rem 30% 0 30%;
+    }
+
+}
+
+
