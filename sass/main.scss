@@ -15,6 +15,7 @@ $text-black: #000000;
 
 //HERE ARE THE FONTS
 
+
 body,html {
     margin: 0;
     height: 100%;
@@ -172,9 +173,8 @@ body,html {
 // MAIN SECTION
 
 #about {
-
-    height: 100%;
     padding-top: 1rem;
+    padding-bottom: 5rem;
 
     .me {
         display: flex;
@@ -233,7 +233,6 @@ body,html {
     background-color: $background-skills;
     padding-top: 8rem;
     padding-bottom: 3rem;
-    height: 100%;
 
     .image-skills {
         width: 200px;
@@ -593,6 +592,10 @@ body,html {
         width: 80% !important;
     }
 
+    .title-text {
+        font-size: 3rem !important;
+    }
+
     .design {
         margin-top: 2rem !important;
         margin-bottom: 2rem !important;
@@ -606,9 +609,13 @@ body,html {
 
     }
 
+    .title-text {
+        font-size: 2.5rem !important;
+    }
+
     .burger {
         display: block !important;
-        margin-right: 20px;
+        margin-right: 2.5rem !important;
     }
 
         
@@ -629,7 +636,6 @@ body,html {
 
     }
     
-
 
     .lang {
         margin: 2.5rem 10% 0 10% !important;

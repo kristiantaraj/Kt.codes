@@ -37,12 +37,6 @@ window.addEventListener("scroll", function() {
         skills6.classList.add("animate-skills");
         skills7.classList.add("animate-skills");
     }
-    if(this.pageYOffset > 1780){
-        slideAnim1.classList.add("slide-animate");
-    }
-    if(this.pageYOffset > 2260){
-        slideAnim2.classList.add("slide-animate2");
-    }
 })
 
 function nextSlide() {
@@ -65,3 +59,4 @@ function openNav() {
   function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
   }
+
