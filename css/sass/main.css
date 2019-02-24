@@ -35,6 +35,12 @@ body, html {
     margin-left: 2rem;
     animation-name: navDown2;
     animation-duration: 4s; }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
   .nav-navbar a {
     color: #eeeeee;
     float: right;
@@ -64,13 +70,16 @@ body, html {
     color: #eeeeee;
     text-decoration: none;
     animation-name: slide;
-    animation-duration: 1s; }
+    animation-duration: 2s;
+    border-bottom: solid 2px #3500d3; }
 
 @keyframes slide {
   from {
-    background-color: rgba(53, 0, 211, 0); }
+    background-color: rgba(53, 0, 211, 0);
+    border-bottom: solid 2px #3500d3; }
   to {
-    background-color: #3500d3; } }
+    background-color: #3500d3;
+    border-bottom: solid 2px white; } }
   .nav-navbar .space-right {
     margin-right: 3rem; }
 
@@ -116,7 +125,8 @@ body, html {
   cursor: pointer; }
 
 #about {
-  height: 60%; }
+  height: 100%;
+  padding-top: 1rem; }
   #about .me {
     display: flex;
     width: 200px;
@@ -138,7 +148,7 @@ body, html {
   #about .about-me {
     color: #eeeeee;
     text-align: center;
-    margin: 1rem 30% 0 30%;
+    margin: 1rem 28% 0 28%;
     margin-bottom: 5rem; }
 
 @keyframes textSlide {
@@ -152,103 +162,181 @@ body, html {
   to {
     opacity: 1; } }
 
-.skills {
+#skills {
   background-color: #535353;
-  padding-top: 3rem; }
-  .skills .image-skills {
+  padding-top: 8rem;
+  padding-bottom: 3rem;
+  height: 100%; }
+  #skills .image-skills {
     width: 200px;
     border-radius: 10%;
     display: flex;
     margin-right: auto;
     margin-left: auto;
     margin-top: 1rem; }
-  .skills .skills-title {
+  #skills .skills-title {
     text-align: center;
     color: #eeeeee; }
-  .skills .html {
+  #skills .html {
     background-color: #9374fc;
     margin: 1rem 30% 0 30%;
     border-radius: 10px; }
-    .skills .html .inside {
+    #skills .html .inside {
       background-color: #c0acff;
       width: 85%;
       border-radius: 10px;
       text-align: center;
       color: #6033f5;
       font-weight: 800; }
-  .skills .css {
+  #skills .css {
     background-color: #9374fc;
     margin: 1rem 30% 0 30%;
     border-radius: 10px; }
-    .skills .css .inside {
+    #skills .css .inside {
       background-color: #c0acff;
       width: 75%;
       border-radius: 10px;
       text-align: center;
       color: #6033f5;
       font-weight: 800; }
-  .skills .js {
+  #skills .js {
     background-color: #9374fc;
     margin: 1rem 30% 0 30%;
     border-radius: 10px; }
-    .skills .js .inside {
+    #skills .js .inside {
       background-color: #c0acff;
       width: 65%;
       border-radius: 10px;
       text-align: center;
       color: #6033f5;
       font-weight: 800; }
-  .skills .php {
+  #skills .php {
     background-color: #9374fc;
     margin: 1rem 30% 0 30%;
     border-radius: 10px; }
-    .skills .php .inside {
+    #skills .php .inside {
       background-color: #c0acff;
       width: 45%;
       border-radius: 10px;
       text-align: center;
       color: #6033f5;
       font-weight: 800; }
-  .skills .sql {
+  #skills .sql {
     background-color: #9374fc;
     margin: 1rem 30% 0 30%;
     border-radius: 10px; }
-    .skills .sql .inside {
+    #skills .sql .inside {
       background-color: #c0acff;
       width: 65%;
       border-radius: 10px;
       text-align: center;
       color: #6033f5;
       font-weight: 800; }
-  .skills .java {
+  #skills .java {
     background-color: #9374fc;
     margin: 1rem 30% 0 30%;
     border-radius: 10px; }
-    .skills .java .inside {
+    #skills .java .inside {
       background-color: #c0acff;
       width: 50%;
       border-radius: 10px;
       text-align: center;
       color: #6033f5;
       font-weight: 800; }
-  .skills .ps {
+  #skills .ps {
     background-color: #9374fc;
     margin: 1rem 30% 0 30%;
     border-radius: 10px; }
-    .skills .ps .inside {
+    #skills .ps .inside {
       background-color: #c0acff;
       width: 67%;
       border-radius: 10px;
       text-align: center;
       color: #6033f5;
       font-weight: 800; }
-  .skills .animate-skills {
+  #skills .animate-skills {
     animation-name: bigUp;
-    animation-duration: 3s; }
-  .skills .lang {
-    margin-top: 1.5rem; }
+    animation-duration: 4s; }
+  #skills .lang {
+    margin-top: 2.5rem; }
 
 @keyframes bigUp {
   from {
     width: 0%; }
   to { } }
+
+#portofolio {
+  padding-top: 5rem; }
+  #portofolio .porto-title {
+    color: #eeeeee;
+    text-align: center; }
+  #portofolio #slides {
+    position: relative;
+    height: 300px;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none; }
+  #portofolio #slides2 {
+    position: relative;
+    height: 300px;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none; }
+  #portofolio .slide {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s; }
+  #portofolio .slide2 {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s; }
+  #portofolio .showing {
+    opacity: 1;
+    z-index: 2; }
+  #portofolio .showing2 {
+    opacity: 1;
+    z-index: 2; }
+  #portofolio .slide-image {
+    width: 50%;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto; }
+  #portofolio .design {
+    text-align: center;
+    color: #eeeeee;
+    margin-top: 3rem;
+    margin-bottom: 3rem; }
+  #portofolio .slide-animate {
+    animation-name: slide1;
+    animation-duration: 4s; }
+  #portofolio .slide-animate2 {
+    animation-name: slide2;
+    animation-duration: 4s; }
+
+@keyframes slide1 {
+  from {
+    margin-right: -1000px; }
+  to {
+    margin-right: 0; } }
+
+@keyframes slide2 {
+  from {
+    margin-left: -1000px; }
+  to {
+    margin-left: 0; } }
