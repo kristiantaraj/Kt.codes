@@ -436,6 +436,9 @@ body, html {
   .burger {
     display: block !important;
     margin-right: 1.5rem !important; }
+  #footer {
+    padding-right: 5%;
+    padding-left: 5%; }
   .links {
     display: none !important; }
   .design2 {
