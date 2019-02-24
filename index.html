@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/sass/main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/sass/main.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
 </head>
@@ -17,13 +17,23 @@
             <nav class="nav-navbar" >
                 <h2 class="username">@KT.codes</h2>
                 <div class="links">
-                    <a href="#header" class="space-right"><i class="fas fa-envelope"></i> Contact</a>
+                    <a href="#footer" class="space-right"><i class="fas fa-envelope"></i> Contact</a>
                     <a href="#portofolio"><i class="fas fa-image"></i> Portofolio</a>
                     <a href="#skills"><i class="fas fa-cogs"></i> Skills</a>
                     <a href="#about"><i class="fas fa-user"></i> About</a>
                     <a href="#header"><i class="fas fa-home"></i> Home</a>
                 </div>
+                <span class="burger" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
             </nav>
+            <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="#header"><i class="fas fa-home"></i> Home</a>
+                    <a href="#about"><i class="fas fa-user"></i> About</a>
+                    <a href="#skills"><i class="fas fa-cogs"></i> Skills</a>
+                    <a href="#portofolio"><i class="fas fa-image"></i> Portofolio</a>
+                    <a href="#footer" class="space-right"><i class="fas fa-envelope"></i> Contact</a>
+                </div>
+            
         </div>
         <div class="title">
             <h2 class="title-text">web developer / designer</h2>
@@ -87,6 +97,14 @@
         </ul>
     </section>
     <section id="footer">
+        <h3 class="contact">That boy has an E-mail</h3>
+        <p class="center"><a class="email" href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJZdkLLQrhmjFTDcLQZVKHHXhXxGfrRKPwPCjsTjkwVstgptCDmLDQZkhxtRFGDpqrnwhqB" target="_blank">tarajkristian@gmail.com</a></p>
+        <h3 class="contact">You can also follow him on social media</h3>
+        <nav class="social">
+            <a href=""><i class="fab fa-instagram spin"></i></a>
+            <a href=""><i class="fab fa-github spin"></i></a>
+            <a href=""><i class="fab fa-codepen spin"></i></a>
+        </nav>
     </section>
     <script src="js/app.js"></script>
 </body>

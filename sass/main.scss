@@ -19,6 +19,7 @@ body,html {
     margin: 0;
     height: 100%;
     background-color: $background;
+        scroll-behavior: smooth;
 }
 
 
@@ -62,10 +63,6 @@ body,html {
     }
 
 
-    @keyframes spin {
-        from {transform:rotate(0deg);}
-        to {transform:rotate(360deg);}
-    }
 
     a {
         color: $text;
@@ -80,6 +77,14 @@ body,html {
     }
 
     .links {
+        animation-name: navDown3;
+        animation-duration: 4s;
+    }
+
+    .burger {
+        float: right;
+        color: $text;
+        display: none;
         animation-name: navDown3;
         animation-duration: 4s;
     }
@@ -246,7 +251,6 @@ body,html {
 
     .html {
         background-color: $in;
-        margin: 1rem 30% 0 30%;
         border-radius: 10px;
 
         .inside {
@@ -263,7 +267,6 @@ body,html {
 
     .css {
         background-color: $in;
-        margin: 1rem 30% 0 30%;
         border-radius: 10px;
 
         .inside {
@@ -278,7 +281,6 @@ body,html {
 
     .js {
         background-color: $in;
-        margin: 1rem 30% 0 30%;
         border-radius: 10px;
 
         .inside {
@@ -293,7 +295,6 @@ body,html {
 
     .php {
         background-color: $in;
-        margin: 1rem 30% 0 30%;
         border-radius: 10px;
 
         .inside {
@@ -308,7 +309,6 @@ body,html {
 
     .sql {
         background-color: $in;
-        margin: 1rem 30% 0 30%;
         border-radius: 10px;
 
         .inside {
@@ -323,7 +323,6 @@ body,html {
 
     .java {
         background-color: $in;
-        margin: 1rem 30% 0 30%;
         border-radius: 10px;
 
         .inside {
@@ -338,7 +337,6 @@ body,html {
 
     .ps {
         background-color: $in;
-        margin: 1rem 30% 0 30%;
         border-radius: 10px;
 
         .inside {
@@ -358,7 +356,7 @@ body,html {
     }
 
     .lang {
-        margin-top: 2.5rem;
+        margin: 2.5rem 30% 0 30%;
     }
 
     @keyframes bigUp {
@@ -373,7 +371,6 @@ body,html {
     .porto-title {
         color: $text;
         text-align: center;
-
     }
 
     #slides {
@@ -465,3 +462,181 @@ body,html {
         to{margin-left: 0;}
     }
 }
+
+#footer {
+    margin-top: 5rem;
+    background-color: $background-skills;
+    padding-top: 3rem;
+
+    .contact {
+        color: $text;
+        text-align: center;
+    }
+
+    .email {
+        color: $fourth;
+        text-decoration: none;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .email:hover {
+        color: rgb(242, 198, 255);
+    }
+
+
+    .center {
+        text-align: center;
+
+    }
+
+    .social{
+        text-align: center;
+        font-size: 2rem;
+        padding-bottom: 2rem;
+
+        a{
+            color: $in;
+        }
+
+        a:hover{
+            color: rgb(242, 198, 255);
+        }
+
+        .spin:hover {
+            animation-name: spin;
+            animation-duration: 1s;
+        }
+
+        
+    @keyframes spin {
+        from {transform:rotate(0deg);}
+        to {transform:rotate(360deg);}
+    }
+
+    }
+
+}
+
+//SideNav
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 8;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align:center;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  margin-left: -2rem;
+
+}
+
+.sidenav a:hover{
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+@media (max-width: 1200px) { 
+    .about-me {
+        margin: 1rem 16% 0 16% !important;
+
+    }
+
+    .lang {
+        margin: 2.5rem 15% 0 15% !important;
+    }
+
+    .slide-image {
+        width: 70% !important;
+    }
+
+    .design {
+        margin-top: 4rem !important;
+        margin-bottom: 3rem !important;
+    }
+ }
+
+@media (max-width: 900px) { 
+    .about-me {
+        margin: 1rem 8% 0 8% !important;
+
+    }
+
+    .slide-image {
+        width: 80% !important;
+    }
+
+    .design {
+        margin-top: 2rem !important;
+        margin-bottom: 2rem !important;
+    }
+ }
+
+
+@media (max-width: 768px) { 
+    .about-me {
+        margin: 1rem 18% 0 18% !important;
+
+    }
+
+    .burger {
+        display: block !important;
+        margin-right: 20px;
+    }
+
+        
+
+    .links {
+        display: none !important;
+    }
+
+    .design2 {
+        margin-top: -3rem !important;
+        margin-bottom: 1rem !important;
+    }
+ }
+
+ @media (max-width: 640px) { 
+    .about-me {
+        margin: 1rem 3% 0 3% !important;
+
+    }
+    
+
+
+    .lang {
+        margin: 2.5rem 10% 0 10% !important;
+    }
+
+    .slide-image {
+        width: 95% !important;
+    }
+ }
+
