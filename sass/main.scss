@@ -193,7 +193,7 @@ body,html {
     }
     .animate2 {
         animation-name: textSlide;
-        animation-duration: 4s;
+        animation-duration: 2s;
     }
     
 
@@ -213,7 +213,7 @@ body,html {
     }
 
     @keyframes textSlide {
-        from{margin-right: -1500px}
+        from{margin-top: -200px}
         to{}
     }
 

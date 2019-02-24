@@ -140,7 +140,7 @@ body, html {
     animation-duration: 8s; }
   #about .animate2 {
     animation-name: textSlide;
-    animation-duration: 4s; }
+    animation-duration: 2s; }
   #about .about-title {
     text-align: center;
     color: #eeeeee;
@@ -154,7 +154,7 @@ body, html {
 
 @keyframes textSlide {
   from {
-    margin-right: -1500px; }
+    margin-top: -200px; }
   to { } }
 
 @keyframes photoFade {
